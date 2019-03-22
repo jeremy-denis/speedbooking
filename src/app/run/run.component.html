@@ -1,0 +1,49 @@
+<div *ngIf="runs == undefined || runs.length == 0">
+ No Run
+</div>
+
+<div *ngIf="runs != undefined && runs.length > 0">
+	<div *ngFor="let run of runs; let $index = index;" class="run">
+		<div class="runTitle">
+			<span class="primary1Color" (click)="openRun(run)">
+				<ion-icon *ngIf="run.opened" name="arrow-down"></ion-icon>
+				<ion-icon *ngIf="!run.opened" name="arrow-forward"></ion-icon>
+				Session {{$index}}
+			</span>
+			<button class="launchButton secondary0Color primary0Background" (click)="this.deleteRun(run)">
+				<ion-icon name="close"></ion-icon>
+			</button>
+			<button class="launchButton secondary0Color primary0Background" (click)="this.editRun(run)">
+				  <ion-icon name="build"></ion-icon>
+			</button>
+			<button class="launchButton secondary0Color primary0Background" (click)="this.launch(run)">
+				<ion-icon *ngIf="!run.pause" name="play"></ion-icon>
+				<ion-icon *ngIf="run.pause" name="pause"></ion-icon>
+			</button>
+			<div class="clear"></div>
+		</div>
+		<div class="myProgress" *ngIf="run.launch">
+			<progress-time [id]="$index" [noControl]="true" [maxTime]="run.time" [autoStart]="true"></progress-time>
+		</div>
+		<div *ngIf="run.opened && run.tours.length > 0" class="runContent neutreBackground">
+			<div *ngIf="run.tours != undefined && run.tours.length > 0" class="centered">
+				<card-map [active]="active" [leng]="run.tours.length"></card-map>
+			</div>
+			
+			<div *ngFor="let table of run.tours[runViewed].tables" class="table">
+				<circular-table [persons]="table.persons" [label]="run.tours[runViewed].remainTurn" *ngIf="table.persons.length > 1"></circular-table>
+			</div>
+			<div class="clear"></div>
+			
+			<button class="launchButton secondary0Color primary0Background left noLeft" (click)="this.vote(run)">
+				Vote
+			</button>
+			
+			<button class="launchButton secondary0Color primary0Background right" (click)="this.resultat(run)" [disabled]="run.persons[0].votes === undefined">
+				Resultat
+			</button>
+			<div class="clear"></div>
+		<!-- <progress-time [id]="run._id" [label]="'Run'" [maxTime]="time"></progress-time>-->
+		</div>
+	</div>
+</div>

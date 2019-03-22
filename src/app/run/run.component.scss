@@ -1,0 +1,136 @@
+.eighty {
+	width:80%;
+}
+
+.label-md-primary, .item-input .label-md-primary, .item-select .label-md-primary, .item-datetime .label-md-primary {
+	color: #239b56;
+}
+
+.button-md {
+ background:#239b56;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width:250x;
+    max-with:60%;
+    background:white;
+    margin:5px;
+    float:left;
+}
+
+.myProgress {
+	margin-top:8px;
+}
+
+.timeDisplay {
+	float: right;
+    font-size: 12pt;
+    margin-bottom: 3px;
+    letter-spacing: 1px;
+}
+
+.noLeft {
+	margin-left:0;
+}
+
+.launchButton {
+	float: right;
+    height: 35px;
+    min-width: 50px;
+    padding-left:15px;
+    padding-right:15px;
+    margin-left: 10px;
+    font-weight: bold;
+    border-radius: 5px; 
+}
+
+.centered {
+	margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+.left {
+	float:left;
+}
+
+.noDesign {
+	border: none;
+    background: none !important;
+    box-shadow: none;
+    z-index:999;
+}
+
+.right {
+	float:right;
+}
+
+.run {
+	border-bottom:solid 1px lightgreen;
+	padding-bottom:30px;
+	line-height:15px;
+	margin-top:20px;
+}
+
+.runTitle {
+	
+}
+
+.runContent {
+	clear:both;
+	width:95%;
+	margin:25px;
+	margin-top:8px;
+	border-radius:3px;
+	margin-bottom:0;
+	padding:3px;
+	margin-left:2.5%;
+}
+
+.myBlur {
+	-webkit-filter:blur(5px);
+	filter:blur(5px);
+	width:100%;
+	height:12px;
+}
+
+.playIcon {
+	font-size:2rem;
+	 float:right;
+}
+
+.runTitle {	
+	font-size:2rem;
+	color: #239b56;
+}
+
+progress {
+	width:80%;
+}
+
+progress[value]::-webkit-progress-value {
+	background-image:
+          -webkit-linear-gradient(
+            top,
+            rgba(255, 255, 255, .25),
+            rgba(0, 0, 0, .25)
+          ),
+	  -webkit-linear-gradient(left, yellow, yellow);
+
+	border-radius: 50px;
+	background-size:100%;
+}
+      
+progress::-webkit-progress-bar {
+	background-image:
+          -webkit-linear-gradient(
+            top,
+            rgba(255, 255, 255, .25),
+            rgba(0, 0, 0, .25)
+          ),
+	  -webkit-linear-gradient(left, white, white);
+	border-radius: 50px;
+	background-size:100%;
+}

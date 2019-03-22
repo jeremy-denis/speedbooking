@@ -1,0 +1,87 @@
+ion-title {
+   font-family: 'Raleway',sans-serif;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+}
+
+.placeCenter {
+	padding-left: calc(50% - 140px);
+    margin-top: 30%;
+}
+
+.toolbar-title {
+    text-overflow: initial;
+    overflow:initial;
+    padding:0;
+}
+
+.toolbar-title-md {
+    font-size: 3rem;
+    padding:0;
+    width:100%;
+}
+
+.neutreBackground {
+	background:LemonChiffon ;
+}
+
+.primary0Background {
+	background:LightGreen;
+}
+
+.secondary0Background {
+	background:HoneyDew;
+}
+
+.primary1Background {
+	background:lightBlue;
+}
+
+.secondary1Background {
+	background:aliceblue;
+}
+
+.primary2Background {
+	background:HotPink;
+}
+
+.secondary2Background {
+	background:MistyRose;
+}
+
+.primary0Color, .bar-button-default-md, .bar-button-clear-md-default, .bar-button-md-default {
+	color:LightGreen;
+}
+
+.secondary0Color {
+	color:LightCyan;
+}
+
+.primary1Color {
+	color:lightBlue;
+}
+
+.secondary1Color {
+	color:aliceblue;
+}
+
+.primary2Color {
+	color:HotPink;
+}
+
+.secondary2Color {
+	color:MistyRose;
+}
+
+.primary1Border {
+	border:solid lightBlue 1px;
+}
+
+.primary2Border {
+	border-bottom:solid HotPink 1px;
+}
+

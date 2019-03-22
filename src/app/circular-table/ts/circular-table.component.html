@@ -1,0 +1,8 @@
+<div class="circular-table">
+  <div [ngStyle]="setMyStyles()" [style.top]="mainTop" [style.left]="mainLeft" class="menuButton primary2Color secondary2Background">{{label}}</div>
+  <div class="tableCircle open">
+	<div *ngFor="let person of persons; let $index = index;" class="primary1Color secondary1Background">
+		<div *ngIf="person != undefined" [style.top]="posItems[$index].top" [style.left]="posItems[$index].left" class="onePerson">{{person.author}}</div>
+	</div>
+  </div>
+</div>

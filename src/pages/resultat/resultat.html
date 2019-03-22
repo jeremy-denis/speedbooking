@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+	<button class="left noDesign primary0Color" ion-button icon-only (click)="this.goBack()">
+		<ion-icon name="arrow-back"></ion-icon>	
+	</button>
+    <ion-title class="neutreBackground primary1Color">
+      <span class="primary2Color">Speed</span><span class="primary1Color">B<ion-icon class="primary0Color" name="book"></ion-icon>king</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="primary1Color" padding>
+	<div Class="listVote neutreBackground">
+		<ion-row class="onePersonLine">
+			<ion-col>receveur</ion-col>
+			<ion-col>algorithme + haut</ion-col>
+			<ion-col>algorithme + content</ion-col>
+		</ion-row>
+		<ion-row class="onePersonLine primary2Border" *ngFor="let person of run.persons; let $index = index;">
+			<ion-col>{{person.author}}</ion-col>
+			<ion-col>{{person.received}}<span class="primary2Color">({{person.cmp}})</span></ion-col>
+			<ion-col>{{person.received2}}<span class="primary2Color">({{person.cmp2 + 1}})</span></ion-col>
+		</ion-row>
+	</div>
+</ion-content>

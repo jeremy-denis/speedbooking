@@ -1,0 +1,68 @@
+ion-title {
+   font-family: 'Raleway',sans-serif;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+}
+
+.toolbar-title {
+    text-overflow: initial;
+    overflow:initial;
+    padding:0;
+}
+
+.toolbar-title-md {
+    font-size: 3rem;
+    padding:0;
+    width:100%;
+}
+
+.roundButton {
+    width: 25px;
+    height: 25px;
+    font-size: 15pt;
+    margin-top: 8px;
+    text-align: center;
+    border-radius: 20%;
+    color: white;
+    -moz-box-shadow: 3px 3px 1px 0px #c0c0c0;
+	-webkit-box-shadow: 3px 3px 1px 0px #c0c0c0;
+	-o-box-shadow: 3px 3px 1px 0px #c0c0c0;
+	box-shadow: 3px 3px 1px 0px #c0c0c0;
+}
+
+.persons {
+	height: 45%;
+    overflow: auto;
+}
+
+.addButton {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.clear {
+	clear:both;
+}
+
+.saveButton {
+	clear:both;
+	font-weight:bold;
+	position: absolute;
+    bottom: 5px;
+    width: 200px;
+    margin-left: calc(50% - 100px);
+    padding-left:0;
+    text-align:center;
+    padding: 18px;
+    border-radius: 4px;
+}
+
+.firstLetter {
+	font-size:24pt;
+	text-transform: uppercase;
+	font-weight:bold;
+}

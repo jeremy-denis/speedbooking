@@ -1,0 +1,45 @@
+<ion-header >
+  <ion-navbar>
+	<button class="left noDesign primary0Color" ion-button icon-only (click)="this.goBack()">
+		<ion-icon name="arrow-back"></ion-icon>	
+	</button>
+    <ion-title class="neutreBackground primary1Color">
+		<span class="primary2Color">Speed</span><span class="primary1Color">B<ion-icon class="primary0Color" name="book"></ion-icon>king</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-item class="eighty">
+		<ion-label class="primary1Color" stacked>Run Duration (in seconds)</ion-label>
+		<ion-input type="text" class="primary2Color" placeholder="Duration" [(ngModel)]="run.time"></ion-input>
+	</ion-item>
+	
+	<ion-item class="eighty">
+		<ion-label class="primary1Color" stacked>Max Per Table</ion-label>
+		<ion-input type="text" class="primary2Color" placeholder="Max" [(ngModel)]="run.max"></ion-input>
+	</ion-item>
+	
+	<button ion-button icon-only class="right addButton secondary0Color primary0Background" (click)="deleteLast()">
+		<ion-icon name="person"></ion-icon>
+		<ion-icon name="remove"></ion-icon>
+	</button>
+	<button ion-button icon-only class="right addButton secondary0Color primary0Background" (click)="addPerson()">
+		<ion-icon name="person"></ion-icon>	
+		<ion-icon name="add"></ion-icon>	
+	</button>
+	<div class="clear"></div>
+	<div class="persons">
+		<ion-row class="onePersonLine primary2Border" *ngFor="let person of run.persons;let $index = index;">
+			<ion-col></ion-col>
+			<ion-col><span class="firstLetter primary1Color">{{person.author.charAt(0)}}</span>{{person.author.substring(1)}}</ion-col>
+			<ion-col><ion-input type="text" placeholder="Alias" [(ngModel)]="person.alias"></ion-input></ion-col>
+			<ion-col *ngIf="$index != (run.persons.length - 1)"></ion-col>
+			<ion-col *ngIf="$index == (run.persons.length - 1)" (click)="deleteLast()"><div class="roundButton primary0Background">-</div></ion-col>
+		</ion-row>
+	</div>
+		
+	<button class="saveButton secondary0Color primary0Background" (click)="this.save()" [disabled]="!(time > 0) && max > 0 && persons.length > 0">
+		Save
+	</button>
+</ion-content>

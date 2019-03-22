@@ -1,0 +1,55 @@
+.circular-table {
+  height: 250px;
+  position: relative;
+  width:250px;
+}
+
+.circular-table .tableCircle {
+  width: 250px;
+  height: 250px;
+  opacity: 0;
+  
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  transform: scale(0);
+
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.circular-table .open.tableCircle {
+  opacity: 1;
+
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+}
+
+.circular-table .tableCircle .onePerson {
+    border-radius: 3px;
+    min-height: 45px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 14pt;
+    line-height:45px;
+    position: absolute;
+    width: auto;
+    max-width:120px;
+    text-align:center;
+    z-index: -1 !important;
+    border-radius:10px;
+    word-wrap: break-word;
+}
+
+.circular-table .menuButton {
+  text-align: center;
+  z-index:99;
+  font-size:24pt;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  height: 80px;
+  line-height:80px;
+  width: 80px;
+  position:absolute;
+}

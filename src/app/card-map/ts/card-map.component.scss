@@ -1,0 +1,30 @@
+.oneCard {
+	-moz-box-shadow: 3px 3px 1px 0px #c0c0c0;
+	-webkit-box-shadow: 3px 3px 1px 0px #c0c0c0;
+	-o-box-shadow: 3px 3px 1px 0px #c0c0c0;
+	box-shadow: 3px 3px 1px 0px #c0c0c0;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#c0c0c0, Direction=134, Strength=1);;
+    transition: 0.3s;
+	padding: 3px;
+    width: 55px;
+    height: 35px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 12px;
+    position:relative;
+    font-weight:bold;
+}
+
+.clear {
+	clear:both;
+}
+
+.selectCard {
+	box-shadow: none;
+}
+
+.disabled {
+	background:#ccc !important;
+}

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+	<ion-title class="neutreBackground primary1Color">
+      <span class="primary2Color">Speed</span><span class="primary1Color">B<ion-icon class="primary0Color" name="book"></ion-icon>king</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div class="">
+		<ion-item>
+			<ion-label class="primary1Color" stacked>Alias</ion-label>
+			<ion-input class="primary2Color" type="text" placeholder="Alias" [(ngModel)]="alias"></ion-input>
+		</ion-item>
+		<ion-item class="">
+			<ion-label class="primary1Color" stacked>Author</ion-label>
+			<ion-select class="primary2Color" [(ngModel)]="selectedAuthor">
+				<ion-option *ngFor="let author of authors" [value]="author.author">{{author.author}}</ion-option>
+			</ion-select>
+		</ion-item>
+	</div>
+	
+	<button class="saveButton secondary0Color primary0Background" (click)="this.save()">
+		Save
+	</button>
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-header *ngIf="!user">
+  <ion-navbar>
+	<button class="left noDesign primary0Color" ion-button icon-only (click)="this.goBack()">
+		<ion-icon name="arrow-back"></ion-icon>	
+	</button>
+	<ion-title class="neutreBackground primary1Color">
+      <span class="primary2Color">Speed</span><span class="primary1Color">B<ion-icon class="primary0Color" name="book"></ion-icon>king</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>	
+	<ion-item>
+		<ion-label class="primary1Color">Vote Pour : <span *ngIf="user != undefined">{{user}}</span></ion-label>
+		<ion-select *ngIf="!user" class="primary2Color" [(ngModel)]="votedPerson">
+			<ion-option *ngFor="let person of run.persons; let $index = index;" [value]="$index">{{person.author}}</ion-option>
+		</ion-select>
+	</ion-item>
+	
+	<div *ngIf="votedPerson >= 0 && run != undefined && run.persons.length > 0" class="listVote neutreBackground">
+		<ul  [dragula]='test' [dragulaModel]='run.persons[votedPerson].votes'>
+			<div *ngFor="let person of run.persons[votedPerson].votes;let $index = index;">
+				<ion-row class="onePersonLine"  *ngIf="person.author != run.persons[votedPerson].author">
+					<ion-col></ion-col>
+					<ion-col><span class="firstLetter primary1Color">{{person.author.charAt(0)}}</span>{{person.author.substring(1)}}</ion-col>
+					<ion-col>{{person.alias}}</ion-col>
+					<ion-col>
+						<ion-icon class="roundButton secondary0Color primary0Background" name="arrow-up" *ngIf="$index > 0" (click)="up($index)"></ion-icon>
+						<ion-icon class="roundButton secondary0Color primary0Background" name="arrow-down" *ngIf="$index < (run.persons[votedPerson].votes.length - 2)" (click)="down($index)"></ion-icon>
+					</ion-col>
+				</ion-row>
+			</div>
+		</ul>
+	</div>
+		
+	<button class="saveButton secondary0Color primary0Background" (click)="this.save()">
+		Save
+	</button>
+</ion-content>
